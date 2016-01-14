@@ -26,6 +26,8 @@ See the script ```RUN_GET_LABELS``` for an example.
 * First column is the file name.
 * Second column is another cell array with length = number of frames, where each cell block at the frame holds IDs of the labelled actions for that frame.
 
-**Note: the annotations are provided assuming that the mocap data has already been subsampled to 24 fps (originally at 120 fps).**
+###Note: 
+* We assume that the mocap data has already been subsampled to 24 fps (originally at 120 fps).
+* We can have multiple labels per frame e.g., a subject can walk and throw at the same time. 
 
 
