@@ -22,12 +22,13 @@ labels_cell = get_annotation_labels(<CSV annotation file path>, ...);
 See the script ```RUN_GET_LABELS``` for an example.
 
 ## The ```labels_cell``` data format:
-```labels_cell: 2000 x 2 cell array```
-* First column is the file name.
-* Second column is another cell array with length = number of frames, where each cell block at the frame holds IDs of the labelled actions for that frame.
+```labels_cell``` is a  ```2000 x 2 cell array``` where each row corresponds to one file:
+* The first column has the file name.
+* And, the second column is another cell array with length equal to the number of frames, where each cell block holds IDs of the labelled actions for that frame.
 
 ###Note: 
 * We assume that the mocap data has already been subsampled to 24 fps (originally at 120 fps).
 * We can have multiple labels per frame e.g., a subject can walk and throw at the same time. 
 
-
+## Acknowledgement
+* We use the function ```csv2cell``` by  Arthur Hebert available at http://www.mathworks.com/matlabcentral/fileexchange/20836-csv2cell
